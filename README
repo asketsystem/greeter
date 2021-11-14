@@ -1,0 +1,12 @@
+Our goal for this project is to find a rhythm in how we go about building our 
+application and discovering if we are on the right track. To help us there, 
+we will adopt test driven development (TDD) for that
+
+We wrote a deployment test that helped guide us through the initial migration needed
+to get our contract onto the test network. This allowed our subsequent tests to inter‐
+act with the deployed contract.
+Lastly, we started exploring the Solidity language and learned about the different
+function visibility modifiers (external, public, internal, private). Those same
+modifiers are also available for state variables (with the exception of external) used
+in persisting data on the blockchain. We also implemented the concept of Ownable
+and refactored to using the OpenZeppelin contract via inheritance
