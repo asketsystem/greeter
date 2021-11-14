@@ -15,3 +15,17 @@ describe("greet()", () => {
     assert.equal(actual, expected, "greeted with 'Hello, World!'");
     });
    });
+
+contract("Greeter: update greeting", () => {
+    describe("setGreeting(string", () => {
+        it("set greeting to passed in string", async () => {
+            const greeter = await GreeterContract.deployed()
+            const expected = "Hi there!";
+
+            await greeter.setGreeting(expected);
+            const actual = await greeter.greet();
+
+            assert.equal(actual, expected, "greeting was not updated");
+        });
+    });
+});
